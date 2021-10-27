@@ -4,7 +4,7 @@ import {BsChevronDown, BsPencilSquare} from 'react-icons/bs'
 import {KTSVG, toAbsoluteUrl} from '../../../helpers'
 import {Formik, Form, FormikValues, Field, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
-import {DropdownButton, Dropdown} from 'react-bootstrap-v5'
+import {DropdownButton, Dropdown, Container, Row, Col} from 'react-bootstrap-v5'
 import {StepperComponent} from '../../../assets/ts/components'
 
 interface ICreateAccount {
@@ -139,7 +139,7 @@ const Main: FC = () => {
   return (
     <div className='modal fade' id='kt_modal_create_app' aria-hidden='true'>
       <div className='modal-dialog modal-dialog-centered mw-900px'>
-        <div className='modal-content'>
+        <div className='modal-content' style={{overflow: 'scroll'}}>
           <div className='modal-header'>
             <h2>Receipt</h2>
             <div className='d-flex'>
@@ -179,43 +179,75 @@ const Main: FC = () => {
               <KTSVG path='/media/icons/duotune/arrows/arr061.svg' className='svg-icon-1' />
             </div>
           </div>
-          <form className='model-form container'>
-            <div className='form-group my-2'>
-              <h5>Receipt</h5>
-              <input type='text' className='form-control' placeholder='enter receipt number' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Receipt Date</h5>
-              <input type='date' className='form-control' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Order</h5>
-              <input type='text' className='form-control' placeholder='order detils' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Booking Number</h5>
-              <input type='text' className='form-control' placeholder='enter booking number ' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Address</h5>
-              <input type='text' className='form-control' placeholder='enter address ' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Event</h5>
-              <input type='text' className='form-control' placeholder='enter event details ' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Email</h5>
-              <input type='text' className='form-control' placeholder='enter email ' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Telephone</h5>
-              <input type='text' className='form-control' placeholder='enter telephone number ' />
-            </div>
-            <div className='form-group my-2'>
-              <h5>Message</h5>
-              <textarea className='form-control'></textarea>
-            </div>
+          <form className='model-form  my-3 '>
+            <Container>
+              <Row>
+                <Col xs={6}>
+                  <div className='form-group my-2'>
+                    <h5>Receipt</h5>
+                    <input
+                      type='text'
+                      className='form-control'
+                      placeholder='enter receipt number'
+                    />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Receipt Date</h5>
+                    <input type='date' className='form-control' />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Order</h5>
+                    <input type='text' className='form-control' placeholder='order detils' />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Booking Number</h5>
+                    <input
+                      type='text'
+                      className='form-control'
+                      placeholder='enter booking number '
+                    />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Address</h5>
+                    <input type='text' className='form-control' placeholder='enter address ' />
+                  </div>
+                </Col>
+                <Col xs={6}>
+                  <div className='form-group my-2'>
+                    <h5>Chinese</h5>
+                    <input
+                      type='text'
+                      className='form-control'
+                      placeholder='enter event details '
+                    />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Event</h5>
+                    <input
+                      type='text'
+                      className='form-control'
+                      placeholder='enter event details '
+                    />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Email</h5>
+                    <input type='text' className='form-control' placeholder='enter email ' />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Telephone</h5>
+                    <input
+                      type='text'
+                      className='form-control'
+                      placeholder='enter telephone number '
+                    />
+                  </div>
+                  <div className='form-group my-2'>
+                    <h5>Message</h5>
+                    <textarea className='form-control'></textarea>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
           </form>
           <div className='container model-table'>
             <table className='table' style={{border: '1px solid lightgray'}}>
