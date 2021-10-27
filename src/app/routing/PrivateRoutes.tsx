@@ -1,9 +1,10 @@
-import React, { Suspense, lazy } from 'react'
-import { Redirect, Route, Switch } from 'react-router-dom'
-import { FallbackView } from '../../_metronic/partials'
-import { Receipt } from '../modules/documents/components/Receipt'
-import { DashboardWrapper } from '../pages/dashboard/DashboardWrapper'
-import { MenuTestPage } from '../pages/MenuTestPage'
+import React, {Suspense, lazy} from 'react'
+import {Redirect, Route, Switch} from 'react-router-dom'
+import {FallbackView} from '../../_metronic/partials'
+import {DereceiptPage} from '../modules/documents/components/DereceiptPage'
+import {Receipt} from '../modules/documents/components/Receipt'
+import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
+import {MenuTestPage} from '../pages/MenuTestPage'
 
 export function PrivateRoutes() {
   const BuilderPageWrapper = lazy(() => import('../pages/layout-builder/BuilderPageWrapper'))
@@ -20,6 +21,7 @@ export function PrivateRoutes() {
         <Route path='/dashboard' component={DashboardWrapper} />
         {/* <Route path='/receipt' component={Receipt} /> */}
         <Route path='/receipt' component={DocumentPage} />
+        <Route path='/dereceipt' component={DereceiptPage} />
         <Route path='/builder' component={BuilderPageWrapper} />
         <Route path='/crafted/pages/profile' component={ProfilePage} />
         <Route path='/crafted/pages/wizards' component={WizardsPage} />

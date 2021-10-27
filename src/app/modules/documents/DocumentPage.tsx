@@ -1,7 +1,8 @@
 import React from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 import {PageLink, PageTitle} from '../../../_metronic/layout/core'
-import { Receipt } from './components/Receipt'
+import {DereceiptPage} from './components/DereceiptPage'
+import {Receipt} from './components/Receipt'
 
 const chatBreadCrumbs: Array<PageLink> = [
   {
@@ -10,6 +11,7 @@ const chatBreadCrumbs: Array<PageLink> = [
     isSeparator: false,
     isActive: false,
   },
+
   {
     title: '',
     path: '',
