@@ -20,7 +20,7 @@ const DereceiptPage: React.FC = () => {
                 <input
                   type='text'
                   className='form-control form-control-lg form-control-solid mb-3 mb-lg-0'
-                  placeholder='Min Receipt'
+                  placeholder='Max Receipt'
                 />
               </div>
 
@@ -58,11 +58,11 @@ const DereceiptPage: React.FC = () => {
               <tr className='fw-bolder text-muted'>
                 <th className='min-w-150px'>Total</th>
                 <th className='min-w-140px'>Email</th>
-                <th className='min-w-120px'>Receipt Date</th>
+                <th className='min-w-120px'> Dereceipt Date</th>
                 <th className='min-w-120px'>Name</th>
                 <th className='min-w-120px'>Booking No.</th>
                 <th className='min-w-120px'>Order</th>
-                <th className='min-w-120px'>Receipt</th>
+                <th className='min-w-120px'>Receipts</th>
                 <th className='min-w-120px'>Action</th>
                 <th className='w-25px'>
                   <div className='form-check form-check-sm form-check-custom form-check-solid'>
