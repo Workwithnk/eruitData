@@ -1,8 +1,12 @@
 import React, {Suspense, lazy} from 'react'
 import {Redirect, Route, Switch} from 'react-router-dom'
 import {FallbackView} from '../../_metronic/partials'
+import {DeInvoice} from '../modules/documents/components/DeInvoice'
+import Delivery from '../modules/documents/components/Delivery'
+import Deposit from '../modules/documents/components/Deposit'
 import {DereceiptPage} from '../modules/documents/components/DereceiptPage'
 import {Invoice} from '../modules/documents/components/Invoice'
+import InvoiceReceipt from '../modules/documents/components/InvoiceReceipt'
 import {Receipt} from '../modules/documents/components/Receipt'
 import {DashboardWrapper} from '../pages/dashboard/DashboardWrapper'
 import {MenuTestPage} from '../pages/MenuTestPage'
@@ -24,6 +28,10 @@ export function PrivateRoutes() {
         <Route path='/receipt' component={DocumentPage} />
         <Route path='/dereceipt' component={DereceiptPage} />
         <Route path='/invoice' component={Invoice} />
+        <Route path='/deinvoice' component={DeInvoice} />
+        <Route path='/deposit' component={Deposit} />
+        <Route path='/delivery' component={Delivery} />
+        <Route path='/invoicereceipt' component={InvoiceReceipt} />
         <Route path='/builder' component={BuilderPageWrapper} />
         <Route path='/crafted/pages/profile' component={ProfilePage} />
         <Route path='/crafted/pages/wizards' component={WizardsPage} />

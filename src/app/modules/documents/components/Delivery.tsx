@@ -3,13 +3,13 @@ import {KTSVG} from '../../../../_metronic/helpers'
 import {RiInformationLine} from 'react-icons/ri'
 import {FaBalanceScale} from 'react-icons/fa'
 
-const DereceiptPage: React.FC = () => {
+function Delivery() {
   const [totalRecords, setTotalRecords] = useState(0)
   return (
     <div className='card mb-5 mb-xl-10'>
       <div className='card-header'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bolder fs-3 mb-1'>Dereceipt</span>
+          <span className='card-label fw-bolder fs-3 mb-1'>Delivery</span>
         </h3>
       </div>
       <div className='card-body border-top p-9 pb-3'>
@@ -57,13 +57,15 @@ const DereceiptPage: React.FC = () => {
             {/* begin::Table head */}
             <thead>
               <tr className='fw-bolder text-muted'>
-                <th className='min-w-150px'>Total</th>
-                <th className='min-w-140px'>Email</th>
-                <th className='min-w-120px'> Dereceipt Date</th>
+                <th className='min-w-150px'>Total Receipt</th>
+                <th className='min-w-120px'>Total With Discount </th>
+                <th className='min-w-140px'>Total Before Discount</th>
+                <th className='min-w-120px'>Status</th>
+                <th className='min-w-120px'>Delivery Date</th>
                 <th className='min-w-120px'>Name</th>
-                <th className='min-w-120px'>Booking No.</th>
+                <th className='min-w-120px'>Booking Number</th>
                 <th className='min-w-120px'>Order</th>
-                <th className='min-w-120px'>Receipts</th>
+                <th className='min-w-120px'>Delivery</th>
                 <th className='min-w-120px'>Action</th>
                 <th className='w-25px'>
                   <div className='form-check form-check-sm form-check-custom form-check-solid'>
@@ -80,13 +82,52 @@ const DereceiptPage: React.FC = () => {
             </thead>
             <tbody>
               <tr style={{fontSize: '15px'}}>
-                <td>200</td>
-                <td>rajkhf@gmail.com</td>
-                <td>30/12/1990</td>
+                <td>250</td>
+                <td>240</td>
+                <td>240</td>
+                <td></td>
+                <td>17/02/2019</td>
                 <td>Rakesh Patel</td>
-                <td>1222</td>
-                <td>133243</td>
+                <td>512</td>
                 <td>530</td>
+                <td>1081</td>
+                <td>
+                  <RiInformationLine
+                    style={{
+                      fontSize: '25px',
+                      borderRadius: '6px',
+                      cursor: 'pointer',
+                      backgroundColor: '#B5B5C3',
+                      padding: '2px',
+                    }}
+                  />
+                  <FaBalanceScale
+                    style={{
+                      padding: '2px',
+                      borderRadius: '6px',
+                      fontSize: '25px',
+                      cursor: 'pointer',
+                      backgroundColor: '#EFC9D5 ',
+                      margin: '0px 3px',
+                    }}
+                  />
+                </td>
+                <td>
+                  <div className='form-check form-check-sm form-check-custom form-check-solid'>
+                    <input className='form-check-input widget-13-check' type='checkbox' value='1' />
+                  </div>
+                </td>
+              </tr>
+              <tr style={{fontSize: '15px'}}>
+                <td>250</td>
+                <td>240</td>
+                <td>240</td>
+                <td></td>
+                <td>17/02/2019</td>
+                <td>Rakesh Patel</td>
+                <td>512</td>
+                <td>530</td>
+                <td>1081</td>
                 <td>
                   <RiInformationLine
                     style={{
@@ -171,4 +212,4 @@ const DereceiptPage: React.FC = () => {
   )
 }
 
-export {DereceiptPage}
+export default Delivery

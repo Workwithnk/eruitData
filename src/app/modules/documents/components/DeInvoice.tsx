@@ -3,13 +3,13 @@ import {KTSVG} from '../../../../_metronic/helpers'
 import {RiInformationLine} from 'react-icons/ri'
 import {FaBalanceScale} from 'react-icons/fa'
 
-const DereceiptPage: React.FC = () => {
+function DeInvoice() {
   const [totalRecords, setTotalRecords] = useState(0)
   return (
     <div className='card mb-5 mb-xl-10'>
       <div className='card-header'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bolder fs-3 mb-1'>Dereceipt</span>
+          <span className='card-label fw-bolder fs-3 mb-1'>Deinvoice</span>
         </h3>
       </div>
       <div className='card-body border-top p-9 pb-3'>
@@ -57,13 +57,13 @@ const DereceiptPage: React.FC = () => {
             {/* begin::Table head */}
             <thead>
               <tr className='fw-bolder text-muted'>
-                <th className='min-w-150px'>Total</th>
+                <th className='min-w-150px'>Total Deinvoice</th>
                 <th className='min-w-140px'>Email</th>
-                <th className='min-w-120px'> Dereceipt Date</th>
+                <th className='min-w-120px'>Deinvoice Date</th>
                 <th className='min-w-120px'>Name</th>
                 <th className='min-w-120px'>Booking No.</th>
                 <th className='min-w-120px'>Order</th>
-                <th className='min-w-120px'>Receipts</th>
+                <th className='min-w-120px'>Deinvoice</th>
                 <th className='min-w-120px'>Action</th>
                 <th className='w-25px'>
                   <div className='form-check form-check-sm form-check-custom form-check-solid'>
@@ -171,4 +171,4 @@ const DereceiptPage: React.FC = () => {
   )
 }
 
-export {DereceiptPage}
+export {DeInvoice}

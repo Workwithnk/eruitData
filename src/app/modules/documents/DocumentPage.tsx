@@ -27,6 +27,10 @@ const DocumentPage: React.FC = () => {
         <PageTitle breadcrumbs={chatBreadCrumbs}>Receipt</PageTitle>
         <Receipt />
       </Route>
+      <Route exact path='/dereceipt'>
+        <PageTitle breadcrumbs={chatBreadCrumbs}>Dereceipt</PageTitle>
+        <DereceiptPage />
+      </Route>
     </Switch>
   )
 }
